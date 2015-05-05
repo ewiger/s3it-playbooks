@@ -1,0 +1,20 @@
+# Entry point
+---
+
+- name: Collecting facts
+  hosts: all
+  gather_facts: yes
+
+# - name: some tests
+#   hosts: all
+#   tasks:
+#    - shell: /usr/bin/uptime
+#      register: result
+
+#    - debug: var=result
+
+#    - name: test
+#      shell: echo test
+
+# Add samba role
+- include: playbooks/samba.yml
