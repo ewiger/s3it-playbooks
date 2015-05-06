@@ -1,0 +1,20 @@
+---
+- name: Storage setup
+  hosts: storage_servers
+  sudo: true
+  vars:
+    # Please note that this label is not always the same as reported by 
+    # the OpenStack volume service.
+    storage_device: '/dev/vdc'
+  tasks:
+
+  - name: format attached volume
+    filesystem: 'fstype=ext4 dev={{ storage_device }}'
+    # be default it is not created if it already has a filesystem
+    # force: no
+    register: result
+
+  - debug: var=result
+
+  - name: check filesystem table
+    shell: 'fdisk -l {{ storage_device }}'

@@ -1,0 +1,21 @@
+---
+- name: Samba setup
+  hosts: samba_servers
+  sudo: true
+  roles:
+    # - samba_export
+    - debops.samba
+  vars:    
+    samba_workgroup: 'WORKGROUP'
+    samba_homes: False
+    samba_shares:
+
+      's3it-share-1':
+        path: '/storage/pelkmans/samba'
+        browseable: 'yes'
+        writeable: 'yes'
+        'valid users': '@storage'
+        'admin users': 'gc3-user'
+        'create mask': '0775'
+        'directory mask': '0775'
+        'force user': 'storage'

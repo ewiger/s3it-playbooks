@@ -1,4 +1,5 @@
+
 # samba_export
-- src: https://github.com/ewiger/samba_export
-  version: master
-  name: samba_export
+# - src: https://github.com/ewiger/samba_export
+#   version: master
+#   name: samba_export

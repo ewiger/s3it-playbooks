@@ -16,5 +16,6 @@
 #    - name: test
 #      shell: echo test
 
-# Add samba role
-- include: playbooks/samba.yml
+# Play role(s) for all hosts in s3it-playbooks/<group>.yml (see hosts for groups)
+- include: s3it-playbooks/storage_servers.yml
+# - include: s3it-playbooks/samba_servers.yml

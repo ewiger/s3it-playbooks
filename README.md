@@ -7,7 +7,13 @@ Ansible role to export cloud storage via samba servers S3IT, UZH  (https://githu
 Install `ansible-galaxy` roles by:
 
 ```
-ansible-galaxy install -r galaxy-playbooks/requirements.yml --roles-path=galaxy-playbooks/
+ansible-galaxy install -r galaxy-playbooks/requirements.yml --roles-path=galaxy-playbooks/roles
+```
+
+Install `s3it` roles by:
+
+```
+ansible-galaxy install -r s3it-playbooks/requirements.yml --roles-path=s3it-playbooks/roles
 ```
 
 ## RUN

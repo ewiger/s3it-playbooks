@@ -55,3 +55,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+
+# Ignore ansible roles
+galaxy-playbooks/roles/*
+s3it-playbooks/roles/*
