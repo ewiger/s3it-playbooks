@@ -1,4 +1,4 @@
-# s3it.samba_export
+# s3it-playbooks
 Ansible role to export cloud storage via samba servers S3IT, UZH  (https://github.com/gc3-uzh-ch)
 
 
